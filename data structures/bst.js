@@ -31,6 +31,32 @@ class Node {
 
     return result;
   }
+
+  preOrderTraversal() {
+    const result = [];
+    result.push(this.value);
+    if (this.left) {
+      Array.prototype.push.apply(result, this.left.preOrderTraversal());
+    }
+    if (this.right) {
+      Array.prototype.push.apply(result, this.right.preOrderTraversal());
+    }
+
+    return result;
+  }
+
+  postOrderTraversal() {
+    const result = [];
+    if (this.left) {
+      Array.prototype.push.apply(result, this.left.postOrderTraversal());
+    }
+    if (this.right) {
+      Array.prototype.push.apply(result, this.right.postOrderTraversal());
+    }
+    result.push(this.value);
+
+    return result;
+  }
 }
 
 exports.Node = Node;
