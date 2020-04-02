@@ -1,4 +1,4 @@
-const breadthFirstSearch = require('./bfs');
+const depthFirstSearch = require('./dfs');
 const Graph = require('../data structures/Graph/graph');
 
 test('finds element in the graph', () => {
@@ -13,9 +13,10 @@ test('finds element in the graph', () => {
     [2, 1],
   ];
   const { nodes } = new Graph(input);
-  expect(breadthFirstSearch(nodes[0], 2)).toBe(true);
-  expect(breadthFirstSearch(nodes[0], 8)).toBe(false);
+  expect(depthFirstSearch(nodes[0], 2)).toBe(true);
+  expect(depthFirstSearch(nodes[0], 8)).toBe(false);
 });
+
 
 test('handles cycles', () => {
   const input = [
@@ -30,6 +31,6 @@ test('handles cycles', () => {
     [2, 1],
   ];
   const { nodes } = new Graph(input);
-  expect(breadthFirstSearch(nodes[0], 2)).toBe(true);
-  expect(breadthFirstSearch(nodes[0], 8)).toBe(false);
+  expect(depthFirstSearch(nodes[0], 2)).toBe(true);
+  expect(depthFirstSearch(nodes[0], 8)).toBe(false);
 });
