@@ -59,4 +59,4 @@ class Node {
   }
 }
 
-exports.Node = Node;
+module.exports = Node;
