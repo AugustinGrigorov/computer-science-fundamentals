@@ -1,4 +1,4 @@
-const { mergeSort } = require('./mergeSort');
+const mergeSort = require('./mergeSort');
 
 test('sorts correctly', () => {
   const input = [28, 8, 3, 9, 32, 5, 6, 12, 18];

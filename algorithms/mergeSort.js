@@ -29,4 +29,4 @@ const mergeSort = (arr) => {
   return arr;
 };
 
-exports.mergeSort = mergeSort;
+module.exports = mergeSort;
