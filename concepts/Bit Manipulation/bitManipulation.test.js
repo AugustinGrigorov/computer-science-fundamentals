@@ -1,4 +1,4 @@
-const { setBit, getBit } = require('./bitManipulation');
+const { setBit, getBit, clearBit } = require('./bitManipulation');
 
 test('gets bit correctly', () => {
   const input = [
@@ -22,5 +22,16 @@ test('sets bit correctly', () => {
   ];
   input.forEach(([n, want, i]) => {
     expect(setBit(n, i)).toBe(want);
+  });
+});
+
+test('clears bit correctly', () => {
+  const input = [
+    [5, 4, 0],
+    [6, 4, 1],
+    [14, 6, 3],
+  ];
+  input.forEach(([n, want, i]) => {
+    expect(clearBit(n, i)).toBe(want);
   });
 });
